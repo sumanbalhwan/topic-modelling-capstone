@@ -1,0 +1,21 @@
+# Data
+data/raw/*
+!data/raw/.gitkeep
+
+# Large model artifacts
+outputs/models/*
+!outputs/models/.gitkeep
+
+# Notebook checkpoints / caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Kaggle credentials (never commit these)
+kaggle.json
+
+# Env
+.env
+venv/
+.venv/
