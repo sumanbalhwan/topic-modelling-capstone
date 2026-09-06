@@ -1,0 +1,18 @@
+# Data — real processed data/figures/models are now committed directly (see README).
+# Only the raw, re-downloadable full dataset stays excluded (too large, easily re-fetched via kagglehub).
+data/raw/*
+!data/raw/.gitkeep
+
+# Notebook checkpoints / caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Kaggle credentials (never commit these)
+kaggle.json
+
+# Env
+.env
+venv/
+.venv/

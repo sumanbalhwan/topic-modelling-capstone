@@ -32,15 +32,16 @@ topic-modelling-capstone/
 ```
 
 ## How to run (Google Colab)
-1. Open a notebook from `notebooks/` in Colab (`File → Open notebook → GitHub`, paste this repo URL).
-2. Run the first setup cell — it installs dependencies and authenticates with Kaggle via `kagglehub`
-   (first run will prompt a one-time browser login; no manual `kaggle.json` needed).
-3. Run cells top to bottom. Each notebook saves its output (processed data / figures / models)
-   into `data/processed/`, `outputs/figures/`, `outputs/models/` respectively, so later notebooks
-   pick up where earlier ones left off.
-4. To reproduce on Kaggle Notebooks instead: create a new notebook, add the dataset via
-   "Add Input" search, and skip the kagglehub download cell (data will already be at
-   `/kaggle/input/india-headlines-news-dataset/`).
+
+**All storage is local to the Colab session — no Google Drive needed.** Because of this, **notebooks 01 through 04 must be run in one continuous Colab session** (local `/content/` storage does not persist across separate sessions the way Drive did). If you need to stop partway, re-run from notebook 01 in a fresh session rather than trying to resume a later notebook alone.
+
+1. Open notebook 01 in Colab (`File → Open notebook → GitHub`, paste this repo URL, or `File → Upload notebook`).
+2. Run its setup cell — creates the local working folder and (in notebook 01) authenticates with Kaggle via `kagglehub` (one-time browser login).
+3. Run notebooks 01 → 02 → 03 → 04 in order, all in the same session/tab.
+4. Notebook 04's final cell packages every result (processed data, figures, trained models) into one zip, sized to stay well under GitHub's 100MB-per-file limit. Download it from the Colab file browser (left sidebar), extract into your local repo root, then `git add`, `commit`, `push` — results now live directly in the repo, no Drive link needed for teammates or graders.
+5. To reproduce on Kaggle Notebooks instead: create a new notebook, add the dataset via "Add Input" search (skip the kagglehub cell), and adjust `BASE_DIR` to a Kaggle working path.
+
+**Note on model files:** saved BERTopic models exclude the underlying sentence-Transformer's weights (`save_embedding_model=False`) specifically to keep them under GitHub's size limit — this only matters if you want to embed brand-new, never-seen headlines later; it doesn't affect any analysis this project does on the existing dataset.
 
 ## Reproducibility notes
 - Random seeds are fixed (`RANDOM_STATE = 42`) everywhere sampling/UMAP/HDBSCAN is used.
