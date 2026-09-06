@@ -1,0 +1,22 @@
+# Data — real processed data/figures/models are now committed directly (see README).
+# Only the raw, re-downloadable full dataset stays excluded (too large, easily re-fetched via kagglehub).
+data/raw/*
+!data/raw/.gitkeep
+
+# Embeddings cache — a local speed-up only (get_embeddings() recomputes if missing), never
+# meant to be committed; can be 400MB-900MB+ per model, far past what git handles well.
+outputs/embeddings/
+
+# Notebook checkpoints / caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Kaggle credentials (never commit these)
+kaggle.json
+
+# Env
+.env
+venv/
+.venv/
