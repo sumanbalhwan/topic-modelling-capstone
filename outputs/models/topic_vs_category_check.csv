@@ -1,0 +1,16 @@
+topic_id,topic_keywords,size,dominant_original_category,pct_matching_dominant_category
+0,bjp poll congress,22683,city,0.633
+1,cup world cup win,15312,sports,0.538
+2,exam school university,12132,city,0.827
+3,film khan kapoor,8242,entertainment,0.633
+4,pak pakistan terror,6907,india,0.33
+5,covid covid case flu,6210,city,0.891
+6,bail plea court,5671,city,0.699
+7,suicide murder commits,5567,city,0.924
+8,cancer hospital surgery,5024,city,0.707
+9,land housing project,4839,city,0.853
+10,bank loan rbi,4601,business,0.575
+11,tiger dog leopard,4362,city,0.834
+12,rain flood monsoon,3421,city,0.843
+13,rape raped minor,3419,city,0.886
+14,stolen thief robbery,3315,city,0.972
