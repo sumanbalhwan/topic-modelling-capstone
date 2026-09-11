@@ -20,3 +20,4 @@ kaggle.json
 .env
 venv/
 .venv/
+*Zone.Identifier*
